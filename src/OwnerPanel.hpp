@@ -18,9 +18,9 @@ private:
     void onSendAnnouncement(CCObject*);
     void onSyncRestart(CCObject*);
 
-    CCLabelBMFont* m_statusLabel = nullptr;
-    CCLabelBMFont* m_playersLabel = nullptr;
-    TextInput* m_announceInput = nullptr;
+    cocos2d::CCLabelBMFont* m_statusLabel = nullptr;
+    cocos2d::CCLabelBMFont* m_playersLabel = nullptr;
+    geode::TextInput* m_announceInput = nullptr;
     CCMenuItemSpriteExtra* m_announceBtn = nullptr;
     CCMenuItemSpriteExtra* m_syncBtn = nullptr;
     CCMenuItemToggler* m_addonsToggle = nullptr;
