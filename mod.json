@@ -1,17 +1,61 @@
 {
-	"geode": "$GEODE_VERSION",
+	"geode": "5.11.1",
 	"gd": {
 		"win": "2.2081",
 		"android": "2.2081",
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "$MOD_ID",
-	"name": "$MOD_NAME",
-	"version": "$MOD_VERSION",
-	"developer": "$MOD_DEVELOPER",
-	"description": "$MOD_DESCRIPTION",
+	"id": "cyber39dreamgd.globed-room-addons",
+	"name": "Globed Room Addons",
+	"version": "v1.0.0",
+	"developer": "Cyber39DreamGD",
+	"description": "Extra owner-only mods for Globed rooms. They only turn on when everyone in the room has this mod installed.",
 	"dependencies": {
-		"geode.node-ids": ">=v1.23.3"
+		"dankmeme.globed2": ">=2.2.0"
+	},
+	"settings": {
+		"room-addons-enabled": {
+			"type": "bool",
+			"name": "Room Addons Enabled (Owner Switch)",
+			"default": true,
+			"description": "The owner's master switch for room addons. Even when ON, addons stay locked until the hidden check proves everyone in the room has this mod."
+		},
+		"auto-check": {
+			"type": "bool",
+			"name": "Auto-Check Room",
+			"default": true,
+			"description": "Automatically run the hidden has-the-mod check when you create/join a room as owner and whenever a player joins or leaves."
+		},
+		"owner-notifications": {
+			"type": "bool",
+			"name": "Owner Notifications",
+			"default": true,
+			"description": "Show the room owner a small notification when room addons get unlocked or locked."
+		},
+		"check-timeout": {
+			"type": "int",
+			"name": "Check Timeout (seconds)",
+			"default": 4,
+			"min": 2,
+			"max": 10,
+			"description": "How long the owner waits for hidden replies before deciding a player does not have the mod."
+		},
+		"open-panel-kb": {
+			"type": "keybind",
+			"name": "Open Room Addons Panel",
+			"default": [
+				"F6"
+			],
+			"description": "Opens the owner panel. The panel only does anything if you are the owner of a Globed room."
+		},
+		"sync-restart-kb": {
+			"type": "keybind",
+			"name": "Sync Restart Everyone",
+			"default": [
+				"F7"
+			],
+			"description": "Owner only, and only when room addons are unlocked: restarts the level for everyone in the room who has this mod, at the same time."
+		}
 	}
 }
